@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Do Your Question</title>
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/home.css">
+    </head>
+    <body>
+        <div id="home" class="content">
+            <header>
+                <a href="/">
+                    <img src="../images/logo.svg" alt="logo" name="logo">
+                </a>
+            </header>
+            
+            <div id="bg">
+                <div class="ball top"></div>
+                <div class="ball bottom"></div>
+            </div>
+            
+            <main>
+                <div class="container">
+                    <section>
+                        <h2>Create your own room</h2>
+            
+                        <form action="new/room" method="POST">
+                            <label class="sr-only" for="room-pass">Insert a password</label>
+                            <input name="password" type="password" id="room-pass" placeholder="Room pass">
+            
+                            
+                            <button>
+                                <img src="../images/enter-room.svg" alt="enter-room-icon">
+                                Create Room
+                            </button>
+                        </form>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Questions</title>
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/room.css">
+        <link rel="stylesheet" href="../styles/modal.css">
+
+        <script src="/scripts/main-room.mjs" defer type="module"></script>
+
+    </head>
+    <body>
+        <!-- Content -->
+        <div id="room" class="content">
+            <!-- Header -->
+            <header>
+                <a href="/">
+                    <img src="../images/logo.svg" alt="logo" name="logo">
+                </a>
+
+                <div class="buttons">
+                    <div class="button outlined" id="room-id">
+                        <p id="room-id">#</p>
+                        <img src="../images/copy.svg" alt="Copy room number">
+                    </div>
+                    <a href="/new-room" class="button">
+                        <img src="../images/users-white.svg" alt="Create room">
+                        Create Room
+                    </a>
+                </div>
+            </header>
+            <!-- /Header -->
+
+            <!-- Main -->
+            <main>
+                <section id="question-form">
+                    <h2>Do your question</h2>
+                    <form id="new-question">
+                        <label class="sr-only" for-id="question">What do you want to question?</label>
+                        <textarea required name="question" id="question" placeholder="What do you want to question"></textarea>
+
+                        <footer>
+                            <div>
+                                <img src="../images/lock.svg" alt="lock-icon">
+                                This question is anonymous
+                            </div>
+                            <button type="submit">Send</button>
+                        </footer>
+                    </form>
+                </section>
+
+                <section id="questions">
+                    <h2 class="sr-only">Perguntas da Comunidade</h2>
+                    <div class="questions">
+                        
+                    </div>
+                </section>
+            </main>
+            <!-- /Main -->
+
+        </div>
+        <!-- /Content -->
+
+        <!-- Modal Action -->
+        <div id="actions" class="modal-wrapper">
+            <div class="modal">
+                <h2>Delete question</h2>
+                <p>Are you sure want to delete this question? Its forever!</p>
+
+                <form>
+                    <label class="sr-only" for-id="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Type your password" required>
+
+                    <div class="buttons">
+                        <div class="button grey cancel">Cancel</div>
+                        <button type="submit" class="red delete">yes, delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /Modal Action-->
+
+        <!-- Modal Response -->
+  
+        <div id="response" class="modal-wrapper">
+            <div class="modal">
+                <h2></h2>
+                <p></p>
+                <div class="buttons">
+                    <div class="button grey cancel">Cancel</div>
+                </div>
+            </div>
+        </div>
+        <!-- /Modal Response -->
+    </body>
+</html>

@@ -1,0 +1,103 @@
+.content {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: 11.4rem 1fr;
+
+	grid-template-areas:
+		"header header"
+		"left right";
+}
+
+header {
+	grid-area: header;
+}
+
+#bg {
+	grid-area: left;
+
+	background: url("../images/home-bg-img.svg") no-repeat top/contain;
+	background-position-x: -10rem;
+}
+
+main {
+	grid-area: right;
+
+	display: flex;
+	align-items: center;
+	margin-top: -12rem;
+}
+
+main h2 {
+	font-family: "Poppins", sans-serif;
+	color: var(--black);
+	font-size: clamp(20px, 8vw, 3.2rem);
+	margin-bottom: 2.4rem;
+}
+
+main input {
+	border: 0.2rem solid var(--grey-blue);
+	padding: 0 1.6rem;
+}
+
+main input,
+button,
+.button {
+	width: 100%;
+	margin-bottom: 1.8rem;
+}
+
+main .container {
+	width: min(36.3rem, 100%);
+}
+
+/* Separator */
+
+.separator {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 4rem 0rem;
+}
+
+.separator div:nth-child(2) {
+	color: var(--grey-blue);
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	padding: 0rem 1.35rem;
+	line-height: 0;
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3) {
+	background: var(--grey-blue);
+	width: 44%;
+	height: 1px;
+}
+
+/* Balls */
+
+.ball {
+	background: var(--blue);
+
+	width: 21.2rem;
+	height: 21.2rem;
+
+	position: fixed;
+	clip-path: circle();
+
+	opacity: 0.1;
+}
+
+.ball.top {
+	top: -44rem;
+	right: -35rem;
+
+	width: 63.3rem;
+	height: 63.3rem;
+}
+
+.ball.bottom {
+	bottom: -15rem;
+	right: 5.6rem;
+}

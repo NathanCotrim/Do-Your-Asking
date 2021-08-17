@@ -4,6 +4,7 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
+    "start": "node src/server.js",
     "dev": "nodemon",
     "init-db": "node src/database/initDatabase.js"
   },

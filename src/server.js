@@ -17,4 +17,4 @@ server.set("view engine", "html")
 server.use(cors())
 server.use(routes)
 
-server.listen(3000, () => console.log('server is running at port 3000'))
+server.listen(80)

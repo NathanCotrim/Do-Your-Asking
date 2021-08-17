@@ -35,7 +35,7 @@ function defineGlobalRoomId() {
 }
 
 async function renderQuestions() {
-    const url = `http://localhost:3000/questions/${globalRoomId}`
+    const url = `http://https://obscure-coast-27898.herokuapp.com/:3000/questions/${globalRoomId}`
 
     const response = await doGETRequest(url)
     const questions = await response.json()
@@ -135,7 +135,7 @@ const setUrl = (event) => {
     const questionId = currentClickedQuestionId
     console.log(currentClickedQuestionId);
 
-    return `http://localhost:3000/room/${globalRoomId}/${questionId}/${action}`
+    return `http://https://obscure-coast-27898.herokuapp.com/:3000/room/${globalRoomId}/${questionId}/${action}`
 }
 
 const deleteQuestion = async () => {
@@ -188,7 +188,7 @@ formNewQuestion.addEventListener('submit', async event => {
     const textarea = document.querySelector('textarea#question')
 
     const textareaValue = textarea.value
-    const url = `http://localhost:3000/new/question`
+    const url = `http://https://obscure-coast-27898.herokuapp.com/:3000/new/question`
         
     await doPOSTRequest(url, { textareaValue, globalRoomId }).then(async response => {
         const { question } = await response.json()

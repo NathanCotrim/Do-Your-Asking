@@ -17,4 +17,4 @@ server.set("view engine", "html")
 server.use(cors())
 server.use(routes)
 
-server.listen(process.env.PORT)
+server.listen(process.env.PORT || 3000)

@@ -17,7 +17,7 @@
 
 <h2>Description:</h2>
 
-<p>This is a anonimous questions forum, maded with nodeJS, SqLite, HTML and CSS. I will add a feature to answer the questions later!</p>
+<p>This is a anonimous questions forum, maded with nodeJS, SqLite, HTML and CSS. I will add a feature to answer the questions later! You can do your questions in any room or create your own, just who has the password can delete or mark as readed the question!</p>
 
 <br>
 

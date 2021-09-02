@@ -8,7 +8,7 @@ enterRoomForm.addEventListener('submit', async e => {
 
     if(!room_id) { return alert('Preencha o campo')}
 
-    const url = 'https://obscure-coast-27898.herokuapp.com/room/valid-access'
+    const url = 'http://localhost:3000/room/valid-access'
 
     await fetch(url, {
         method: 'POST',
@@ -19,7 +19,8 @@ enterRoomForm.addEventListener('submit', async e => {
         }
     }).then(async response => {
         const responseFormatted = await response.json()
-        if(responseFormatted.error) { return alert(error) }
+        console.log(responseFormatted);
+        if(responseFormatted.error) { return alert(responseFormatted.error) }
 
         window.location.href = `/room/${responseFormatted}`
     })
